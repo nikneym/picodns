@@ -10,7 +10,7 @@ if err then
   error(err)
 end
 
--- when called inside a coroutine,
+-- when called in a coroutine,
 -- it becomes a non-blocking call
 local co = coroutine.create(function()
   local answers, err = resolver:query("luajit.org")

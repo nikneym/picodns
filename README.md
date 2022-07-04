@@ -4,7 +4,7 @@ picodns is a simple interface to interact with DNS providers in a concurrent way
 
 Why?
 ===========
-I'm aware that both of the modules mentioned earlier do the same thing for you but [in order to achieve non-blocking `connect` calls on luasocket](https://github.com/lunarmodules/luasocket/issues/382), DNS resolving had to be done concurrently. Unfortunately, LuaResolver does not support non-blocking and lua-resty-dns requires cosocket API of ngx_lua, so the options didn't satisfy me.
+I'm aware that both of the modules mentioned earlier do the same thing but [in order to achieve non-blocking `connect` calls on luasocket](https://github.com/lunarmodules/luasocket/issues/382), DNS resolving had to be done concurrently. Unfortunately, LuaResolver does not support non-blocking and lua-resty-dns requires cosocket API of ngx_lua, so the options didn't satisfy me.
 
 How-to
 ===========
@@ -21,7 +21,7 @@ if err then
   error(err)
 end
 
--- when called inside a coroutine,
+-- when called in a coroutine,
 -- it becomes a non-blocking call
 local co = coroutine.create(function()
   local answers, err = resolver:query("luajit.org")
