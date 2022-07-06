@@ -1,4 +1,4 @@
-local dns = require "init"
+local dns = require "picodns"
 
 -- custom DNS endpoints can be used
 -- normally it uses cloudflare, google and quad9
