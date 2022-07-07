@@ -12,7 +12,7 @@ local remove = table.remove
 local gettime = socket.gettime
 local udp4 = socket.udp4
 
-local dns = {}
+local dns = { version = "0.1.0" }
 dns.__index = dns
 dns.servers = {
   "1.1.1.1",
