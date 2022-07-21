@@ -47,12 +47,10 @@ Installation
 ```
 git clone git@github.com:nikneym/picodns.git
 ```
-in your project directory and include it like
+in your project directory and include it
 ```lua
-package.path = "picodns/?.lua;" .. package.path
 local dns = require "picodns"
 ```
-You only need picodns.lua and parser.lua though!
 
 Documentation
 ===========
